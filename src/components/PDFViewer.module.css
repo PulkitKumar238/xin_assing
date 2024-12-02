@@ -1,0 +1,131 @@
+.pdfViewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.toolbar button.active {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.navigation, .zoomControls, .editTools {
+  display: flex;
+  gap: 10px;
+}
+
+.saveButton {
+  padding: 8px 16px;
+  border: 1px solid #28a745;
+  border-radius: 4px;
+  background: #28a745;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.saveButton:hover {
+  background: #218838;
+}
+
+.canvasContainer {
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.mainCanvas {
+  display: block;
+  max-width: 100%;
+}
+
+.editCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: all;
+}
+
+.editCanvas.cursor {
+  cursor: crosshair;
+}
+
+.editCanvas.blur {
+  cursor: crosshair;
+}
+
+.editCanvas.erase {
+  cursor: cell;
+}
+
+.editCanvas.text {
+  cursor: text;
+}
+
+.editCanvas.image {
+  cursor: move;
+}
+
+.editCanvas.image.resizing {
+  cursor: nwse-resize;
+}
+
+.loading {
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  padding: 20px;
+  color: red;
+  font-size: 16px;
+}
+
+.textInput {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  background: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.textInput input[type="text"] {
+  width: 100px;
+}
+
+.textInput input[type="color"],
+.textInput input[type="number"] {
+  width: 50px;
+}
+
+.zoomControls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+} 
